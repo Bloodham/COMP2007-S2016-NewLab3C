@@ -98,5 +98,14 @@ namespace COMP2007_S2016_Lab3C
             //Refresh the grid
             this.GetStudents();
         }
+
+        protected void PageSizeDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Set the new page size
+            StudentsGridView.PageSize = Convert.ToInt32(PageSizeDropDownList.SelectedValue);
+
+            //refresh the grid
+            this.GetStudents();
+        }
     }
 }
